@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import authService from "../appwrite/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../store/authSlice";
-import { Button, Input, Logo } from "./index";
+import { Button, Input, Logo } from "./index.js";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 
 function Signup() {
   const navigate = useNavigate();
-  const { error, setError } = useState("");
+  const [error, setError] = useState("");
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
   const create = async (data) => {
@@ -41,9 +41,9 @@ function Signup() {
           Already have an account?&nbsp;
           <Link
             to="/login"
-            className="font-medius text-primary transition-all duration-200 hover:underline"
+            className="font-medium text-primary transition-all duration-200 hover:underline"
           >
-            Sign Up
+            Sign In
           </Link>
         </p>
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}

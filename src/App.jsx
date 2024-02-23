@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Header, Footer } from "./Components/index";
+import { Header, Footer } from "./Components";
 import { useDispatch } from "react-redux";
 import authService from "./appwrite/auth";
 import { login, logout } from "./store/authSlice";
@@ -29,7 +29,10 @@ function App() {
     <div className="min-h-screen flex flex-wrap content-between bg-gray-400">
       <div className="w-full block">
         <Header />
-        <main>{/*<Outlet/> */}</main>
+        <main>
+          TODO:
+          <Outlet />
+        </main>
 
         <Footer />
       </div>

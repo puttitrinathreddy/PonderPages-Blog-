@@ -5,11 +5,13 @@ import Logo from "./Logo";
 import LogoutBtn from "./Header/LogoutBtn";
 import RTE from "./RTE";
 import Button from "./Button";
-import SignUp from "../pages/SignUp.jsx";
-import Login from "../pages/Login.jsx";
-import Post from "./Post";
-import PostForm from "../Components/post-form/PostForm.jsx";
-import PostCard from "./Postcard.jsx";
+import Signup from "./Signup";
+import Select from "../Components/Select.jsx";
+import Login from "./Login";
+import Input from "./Input";
+import PostForm from "./post-form/PostForm";
+import Postcard from "../Components/Postcard.jsx";
+import AuthLayout from "./AuthLayout";
 export {
   Header,
   Footer,
@@ -18,9 +20,11 @@ export {
   LogoutBtn,
   Button,
   RTE,
-  SignUp,
+  Signup,
   Login,
-  Post,
   PostForm,
-  PostCard,
+  Postcard,
+  AuthLayout,
+  Input,
+  Select,
 };

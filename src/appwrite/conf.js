@@ -57,7 +57,7 @@ export class Service {
         config.appwriteCollectionId,
         slug
       );
-      return "true";
+      return true;
     } catch (error) {
       console.log("Appwrite service :: deletePost :: error", error);
       return false;
@@ -73,6 +73,7 @@ export class Service {
       );
     } catch (error) {
       console.log("Appwrite service :: getPost :: error", error);
+      return false;
     }
   }
 
@@ -91,7 +92,7 @@ export class Service {
 
   // Files upload service
 
-  async uploadFiles(file) {
+  async uploadFile(file) {
     try {
       return await this.bucket.createFile(
         config.appwriteBucketId,
@@ -104,7 +105,7 @@ export class Service {
     }
   }
 
-  async deleteFiles(fileId) {
+  async deleteFile(fileId) {
     try {
       await this.bucket.deleteFile(config.appwriteBucketId, fileId);
       return true;
